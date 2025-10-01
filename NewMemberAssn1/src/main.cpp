@@ -10,8 +10,13 @@ static constexpr uint8_t LedPin = 2;
 
 /***************************** FUNCTION DEFINITIONS *****************************/
 
-void LedFlash(uint8_t ledPin) {
+void LedFlash(uint8_t ledPin) 
+{
   // define your function here
+  digitalWrite(ledPin, HIGH);
+  delay(50);
+  digitalWrite(ledPin, LOW);
+  delay(50);
 }
 
 void PwmGeneration(uint8_t pwmPin, uint32_t frequency) {
